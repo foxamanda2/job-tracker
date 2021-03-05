@@ -5,7 +5,39 @@ import { Panel } from './Panel'
 import { PanelItem } from './PanelItem'
 
 export function Companies() {
-  consr[(companies, setCompanies)] = useState([])
+  const [companies, setCompanies] = useState([
+    [
+      {
+        id: 1,
+        position: 'Full Stack Developer',
+        technology: null,
+        contactName: 'Sarah Bill',
+        contactEmail: 'sarah@example.com',
+        remote: true,
+        contactCount: 3,
+        companyName: 'SDG',
+        salary: 40000,
+        benefits: true,
+        companyLogo: null,
+        description:
+          'Full Stack Developer position for creating the new SDG Webpage',
+      },
+      {
+        id: 2,
+        position: 'Brista',
+        technology: null,
+        contactName: 'Harold Cleave',
+        contactEmail: 'Harold@example.com',
+        remote: false,
+        contactCount: 1,
+        companyName: 'TheFlyingLobster',
+        salary: 20000,
+        benefits: false,
+        companyLogo: null,
+        description: 'Coffee shop barista job opened for immediate hire',
+      },
+    ],
+  ])
   return (
     <main className="companies">
       <Panel
