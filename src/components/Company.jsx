@@ -1,12 +1,12 @@
 import React from 'react'
 import { Icon } from '../Icon'
 
-export function Company({ name, url, description }) {
+export function Company({ name, email, description }) {
   return (
     <div className="company">
       <header>
         <h3>{name}</h3>
-        <a href={url}>
+        <a href={email}>
           <Icon name="link" />
         </a>
       </header>
