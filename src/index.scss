@@ -1,14 +1,15 @@
 @import url('https://fonts.googleapis.com/css2?family=Lilita+One&family=Rubik:ital,wght@0,400;0,700;1,400&display=swap');
 
-$text-color: #26242c;
-$border-color: #38b6ba;
-$link-color: #1fb5b4;
-$panel-header-bg: #83c6d1;
+$text-color: #505168;
+$border-color: #eaefd3;
+$link-color: #505168;
+$panel-header-bg: #dcc48e;
+
 body {
   font-family: 'Rubik', sans-serif;
   font-size: 20px;
   color: $text-color;
-  background-color: #76c1cc;
+  background-color: #b3c0a4;
 }
 
 h1 {
@@ -18,24 +19,6 @@ h1 {
 h2,
 h3 {
   font-weight: 700;
-}
-
-a {
-  &:link {
-    text-decoration: none;
-    color: $link-color;
-    font-weight: 700;
-  }
-
-  &:visited {
-    color: $link-color;
-  }
-
-  &:focus,
-  &:hover,
-  &:active {
-    text-decoration: underline;
-  }
 }
 
 .container {
@@ -54,26 +37,21 @@ a {
 }
 
 .header {
-  background-color: pink;
   grid-column: 1 / span 2;
-  padding: 2rem;
-  text-align: center;
-  font-weight: bold;
   font-size: 3rem;
-  background-image: url(https://images.unsplash.com/photo-1614521185607-c374b6c5609c?ixlib=rb-1.2.1&q=80&fm=jpg&crop=entropy&cs=tinysrgb&dl=scott-webb-DrpKaw3vWGI-unsplash.jpg&w=1920);
   background-size: cover;
   height: 16rem;
   display: flex;
   justify-content: center;
   align-items: center;
   color: white;
-  text-shadow: 0 0 8px black;
+  background-image: url(https://unsplash.com/photos/p_kICQCOM4s/download?force=true&w=1920);
+  background-position: 0px;
+  text-shadow: 0 0 8px #27233a;
   border-bottom: thin solid $border-color;
 
   sup {
     font-size: 0.8rem;
-    vertical-align: super;
-    margin-left: 0.25rem;
   }
 }
 
@@ -116,7 +94,7 @@ a {
 
 .interactions {
   border-top: thin solid $border-color;
-  background-color: goldenrod;
+  background-color: #dcc48e;
 }
 
 .footer {
@@ -124,15 +102,10 @@ a {
   border-top: thin solid $border-color;
   text-transform: uppercase;
   font-size: 1rem;
-  background-color: lighten($border-color, 50%);
   display: flex;
   justify-content: center;
   align-items: center;
   padding: 2rem;
-
-  .love {
-    color: darkmagenta;
-  }
 }
 
 .panel {
@@ -140,11 +113,10 @@ a {
     display: flex;
     justify-content: space-between;
     background-color: $panel-header-bg;
-    padding: 0.5rem;
+    padding: 0rem;
     text-transform: uppercase;
     font-size: 1rem;
     letter-spacing: 0.025rem;
-    color: darken($panel-header-bg, 40%);
   }
 
   li {
@@ -155,31 +127,12 @@ a {
   }
 }
 
-.notification {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-
-  h3 {
-    margin-bottom: 0.25rem;
-  }
+.notification h3 {
+  margin-bottom: 0.25rem;
 }
 
 .company {
   header {
     display: flex;
-    align-items: center;
-
-    h3 {
-      margin-right: 0.5rem;
-    }
-
-    a {
-      font-size: 0.8rem;
-    }
-  }
-
-  .actions {
-    text-align: right;
   }
 }

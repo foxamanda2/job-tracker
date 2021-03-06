@@ -1,6 +1,5 @@
 import React from 'react'
 import { Link, Route, Switch } from 'react-router-dom'
-import { Icon } from './Icon'
 import { Notification } from './components/Notification'
 import { Panel } from './components/Panel'
 import { PanelItem } from './components/PanelItem'
@@ -10,23 +9,11 @@ export function App() {
   return (
     <div className="home container">
       <header className="header">
-        <h1>
-          Job Trackr
-          <sup>
-            <Icon name="trademark" />
-          </sup>
-        </h1>
+        <h1>Job Track</h1>
       </header>
 
       <aside className="notifications">
-        <Panel
-          title="Notification"
-          headerAction={
-            <a href="#new">
-              <Icon name="plus" />
-            </a>
-          }
-        >
+        <Panel title="Notification" headerAction={<a href="#new"></a>}>
           <PanelItem>
             <Notification
               title="Email ACME, Inc."
@@ -52,9 +39,7 @@ export function App() {
 
       <aside className="interactions">
         <h2>Interactions</h2>
-        <a href="#new">
-          <Icon name="plus" />
-        </a>
+        <a href="#new"></a>
         <ul>
           <li>
             <h3>Emailed PetCo</h3>
@@ -75,49 +60,8 @@ export function App() {
       </aside>
 
       <footer className="footer">
-        <p>
-          &copy; 2021 Cohort 20. Made with{' '}
-          <span className="love">
-            <Icon name="heart" />
-          </span>{' '}
-          in St. Petersburg, FL.
-        </p>
+        <p>&copy; 2021 Cohort 20. Made with love in St. Petersburg, FL.</p>
       </footer>
     </div>
   )
 }
-
-// export function App() {
-//   return (
-//     <>
-//       <header>
-//         <h1>Welcome to my SPA</h1>
-//         <nav>
-//           <ul>
-//             <li>
-//               <Link to="/">Go Home</Link>
-//             </li>
-//             <li>
-//               <Link to="/1">Page 1</Link>
-//             </li>
-//             <li>
-//               <Link to="/2">Page 2</Link>
-//             </li>
-//           </ul>
-//         </nav>
-//       </header>
-//       <Switch>
-//         <Route exact path="/">
-//           Home
-//         </Route>
-//         <Route exact path="/1">
-//           Page 1
-//         </Route>
-//         <Route exact path="/2">
-//           Page 2
-//         </Route>
-//         <Route path="*">Not Found</Route>
-//       </Switch>
-//     </>
-//   )
-// }
